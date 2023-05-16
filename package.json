@@ -1,13 +1,14 @@
 {
   "name": "@roryduncan/use-store",
-  "version": "1.0.0",
+  "version": "0.18.0",
+  "type":"module",
   "description": "",
-  "main": "dist/index.js",
   "browser": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./hooks": "./dist/hooks/useStore.js"
   },
   "scripts": {
     "postinstall": "npm run build",

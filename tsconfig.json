@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
-      "target": "esnext",
+      "target": "ES2018",
       "lib": [
           "dom",
           "dom.iterable",
@@ -23,5 +23,20 @@
       "moduleResolution": "node",
       "resolveJsonModule": true,
       "isolatedModules": true,
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": false,
+    "bracketSpacing": true,
+    "printWidth": 120
   },
 }
