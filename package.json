@@ -1,6 +1,6 @@
 {
-  "name": "@roryduncan/use-store",
-  "version": "0.18.0",
+  "name": "storvice",
+  "version": "0.99.0",
   "type":"module",
   "description": "",
   "browser": "dist/index.js",
