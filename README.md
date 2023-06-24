@@ -1,5 +1,4 @@
 # storvice
-[github](https://github.com/RoryDuncan/use-store)
 
 A hook and some nice typescript definitions that allow you to use svelte stores within react.
 
