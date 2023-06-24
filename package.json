@@ -11,7 +11,7 @@
     "./hooks": "./dist/hooks/useStore.js"
   },
   "scripts": {
-    "postinstall": "npm run build",
+    "prepare": "npm run build",
     "clean": "rm -rf ./dist",
     "build": "tsc",
     "dev": "tsc -w",
