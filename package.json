@@ -1,7 +1,7 @@
 {
   "name": "storvice",
   "version": "0.99.0",
-  "type":"module",
+  "type": "module",
   "description": "",
   "browser": "dist/index.js",
   "module": "dist/index.js",
@@ -33,6 +33,6 @@
   },
   "volta": {
     "node": "18.16.0",
-    "npm": "9.6.6"
+    "npm": "9.7.2"
   }
 }
