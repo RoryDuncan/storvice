@@ -1,6 +1,6 @@
 {
   "name": "storvice",
-  "version": "0.99.1",
+  "version": "1.0.0",
   "type": "module",
   "description": "",
   "browser": "dist/index.js",
