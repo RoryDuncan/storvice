@@ -18,7 +18,11 @@
     "test": "concurrently -c \"green.bold\" npm:test:*",
     "test:types": "tsd -f ./tests/*.test-d.ts && echo No type test failures && exit 0"
   },
-  "author": "",
+  "author": "Rory Duncan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoryDuncan/storvice"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.2.6",
