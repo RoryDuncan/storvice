@@ -27,9 +27,10 @@ export function test_writable_stores() {
 }
 
 export function test_incorrect_store() {
-  const incorrectType = "not a store";
+  const incorrectType: string = "not a store";
   // @ts-expect-error
-  expectError(useStore(incorrectType));
+  const result: never = useStore(incorrectType);
+  expectNever(result);
 }
 
 export function test_store_contracts() {
