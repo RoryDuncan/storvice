@@ -2,9 +2,13 @@
 import { type Updater, writable, get as getValue } from "svelte/store";
 import type { MapStore, SetStore } from "./types";
 
-export const createSetStore = <T>(initialValue?: Iterable<T> | T): SetStore<T> => {
+type SetConstructorParams<T> = ConstructorParameters<typeof Set<T>>[number];
+type MapConstructorParams<K, V> = ConstructorParameters<typeof Map<K, V>>[number];
+
+
+export const createSetStore = <T>(initialValue?: Iterable<T> | SetConstructorParams<T>): SetStore<T> => {
   // new Set(new Set()) is valid
-  const inner = writable(new Set(initialValue as Iterable<T>));
+  const inner = writable(new Set(initialValue));
 
   const update = (updater: Updater<Set<T>>) => {
     inner.update((oldSet: Set<T>) => {
@@ -26,8 +30,8 @@ export const createSetStore = <T>(initialValue?: Iterable<T> | T): SetStore<T> =
   };
 };
 
-export const createMapStore = <K, V>(initialValue?: Map<K, V> | [K, V][]): MapStore<K, V> => {
-  const inner = writable(new Map(initialValue as Map<K, V>));
+export const createMapStore = <K, V>(initialValue?: Map<K, V> | MapConstructorParams<K, V>): MapStore<K, V> => {
+  const inner = writable(new Map(initialValue));
 
   const update = (updater: Updater<Map<K, V>>) => {
     inner.update((oldSet: Map<K, V>) => {
